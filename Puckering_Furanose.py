@@ -26,7 +26,7 @@ def dumping_frames(res_name, tpr, xtc):
 	else:
 		os.system("rm frames/*")
 
-	os.system("echo {} System | gmx_51X trjconv -s " + tpr + " -f " + xtc + " -sep -skip " + str(skip) + " -o frames/frame_.pdb -pbc mol -center".format(res_name))
+	os.system("echo {} System | gmx_51X trjconv -s ".format(res_name) + tpr + " -f " + xtc + " -sep -skip " + str(skip) + " -o frames/frame_.pdb -pbc mol -center")
 
 
 ##########################################################################################################################################
@@ -39,7 +39,7 @@ skip = 2
 dt = 2*skip			# Definition of timestep, depends on the simulation you're running
 
 
-#dumping_frames(res_name,tpr, xtc)
+dumping_frames(res_name,tpr, xtc)
 
 
 current_dir = os.getcwd() # Takes current directory
