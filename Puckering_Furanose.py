@@ -121,9 +121,9 @@ for i in range(len(pdbs)):
     Zx = ((v1 + v3) / zx_1) * 57.29
     Zy = ((v1 - v3) / zy_1) * 57.29  
     # Now, calculate Ptheta and Ar based on Zx and Zy
-    Ptheta = 57.296 * math.atan(Zy/Zx)
+    Ptheta = 57.29 * math.atan(Zy/Zx)
 
-    Ar = math.sqrt((Zy**2) + (Zx**2)) * 57.269
+    Ar = math.sqrt((Zy**2) + (Zx**2)) * 57.29 / 100
 	
     # We add this values to it's respective list
 	
